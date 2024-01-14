@@ -6,6 +6,8 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("/fonts/Inter-Variable.woff2") format("woff2-variations");
+  src: url("/fonts/Inter-Variable.woff2") format("woff2-variations"),
+    url("/fonts/Inter-Variable.woff2") format("woff2"),
+    url("/fonts/Inter-Variable.woff2") format("woff2-support-variations");
   font-weight: 400 785;
 }

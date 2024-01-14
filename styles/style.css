@@ -160,15 +160,12 @@ main {
   block-size: 100%;
 }
 
-.button__text {
-  z-index: 2;
-}
-
 .card__like-button:hover::before {
   transform: scaleX(1);
 }
 
 .button__text {
+  z-index: 2;
   font-family: "PressStart2P";
   font-size: 14px;
   font-style: normal;
@@ -250,17 +247,14 @@ p.main_font {
   padding: 15px 20px;
   border: solid 2px;
   margin-bottom: 103px;
+  position: relative;
+  transition: box-shadow 0.3s ease;
+  outline: none;
 }
 @media (width <= 375px) {
   .button-save {
     flex-direction: column;
   }
-}
-
-.button-save {
-  position: relative;
-  transition: box-shadow 0.3s ease;
-  outline: none;
 }
 
 .button-save:before {
