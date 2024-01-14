@@ -17,4 +17,377 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.header {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 2px;
+  width: clamp(371px, 100%, 696px);
+  height: clamp(20.188rem, 19.285rem + 3.85vw, 22.75rem);
+  justify-content: end;
+  padding-block-end: 25px;
+  gap: 25px;
+}
+
+h1 {
+  font-family: "PressStart2P";
+  font-size: clamp(3.0625rem, 1.8943rem + 4.9844vw, 4.0625rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: "PressStart2P";
+  font-size: clamp(0.875rem, 0.2179rem + 2.8037vw, 1.4375rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+ul {
+  font-family: "PressStart2P";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.header_title {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+article {
+  width: clamp(371px, 100%, 696px);
+  display: flex;
+  flex-direction: column;
+  border: solid 2px;
+}
+
+.article_text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 25px;
+}
+
+img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
+  border-top: solid 2px;
+  border-bottom: solid 2px;
+}
+
+div:has(img) {
+  position: relative;
+}
+
+div:has(img) span {
+  position: absolute;
+  inset-inline-end: 13px;
+  inset-block-start: 24px;
+  width: fit-content;
+  font-family: "PressStart2P";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  mix-blend-mode: hard-light;
+  opacity: 0.5;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.buttons_container {
+  display: flex;
+  align-self: end;
+  gap: 12px;
+}
+
+.card__like-button {
+  border: 2px solid;
+  padding: 9px 17px;
+  width: 130px;
+  position: relative;
+  transition: box-shadow 0.3s ease;
+  outline: none;
+}
+
+.card__like-button:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  transition: transform 0.5s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.button__text {
+  z-index: 2;
+}
+
+.card__like-button:hover::before {
+  transform: scaleX(1);
+}
+
+.button__text {
+  font-family: "PressStart2P";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%; /* 12.6px */
+}
+
+.card__icon-button {
+  margin: auto 0;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+h3 {
+  padding: 5px 10px;
+}
+
+.main_font {
+  font-family: "Inter";
+  font-size: 18px;
+  font-style: normal;
+}
+
+h3.main_font {
+  line-height: normal;
+}
+
+p.main_font {
+  line-height: 21px;
+}
+
+.theme-menu__button:disabled {
+  pointer-events: none;
+}
+
+.theme-menu__button:disabled,
+.theme-menu__button:hover,
+.theme-menu__button:focus-visible {
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.theme-menu__button:disabled:before {
+  content: "▶";
+  position: absolute;
+  left: -16px;
+  animation: slideAnimation 0.5s ease-in-out infinite alternate;
+}
+.theme-menu__button {
+  outline: none;
+  position: relative;
+}
+
+.theme-menu__button:after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 6px;
+  width: calc(100% - 12px);
+  height: 2px;
+  background-color: #000;
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.theme-menu__button:focus-visible:after {
+  transform: scaleX(1);
+  opacity: 0.6;
+}
+
+.button-save {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 20px;
+  border: solid 2px;
+  margin-bottom: 103px;
+}
+@media (width <= 375px) {
+  .button-save {
+    flex-direction: column;
+  }
+}
+
+.button-save {
+  position: relative;
+  transition: box-shadow 0.3s ease;
+  outline: none;
+}
+
+.button-save:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  transition: transform 0.5s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.button__icon {
+  width: 21px;
+}
+
+.button-save:hover::before {
+  transform: scaleX(1);
+}
+
+.button__text-save {
+  z-index: 10;
+}
+
+.modal {
+  padding: 30px;
+  max-width: 355px;
+  outline: none;
+  margin: auto;
+}
+
+.modal-text {
+  font-family: "PressStart2P";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.modal::backdrop {
+  opacity: 0.75;
+  background: #000000;
+}
+
+.modal__content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.modal_container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.modal__icon {
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
+}
+
+.button__modal-text {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%; /* 12.6px */
+  text-transform: uppercase;
+}
+
+.modal__button {
+  font-weight: 400;
+  line-height: 90%; /* 12.6px */
+  font-size: 14px;
+  justify-self: center;
+  width: 100%;
+  text-align: center;
+  border: 2px solid;
+  padding: 9px 17px;
+  position: relative;
+  transition: box-shadow 0.3s ease;
+  outline: none;
+}
+
+.modal__button:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  transition: transform 0.5s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.modal__button:hover::before {
+  transform: scaleX(1);
+}
+
+.rotate {
+  filter: hue-rotate(150deg);
+}
+
+.saturate {
+  filter: saturate(300%);
+}
+
+.sepia {
+  filter: sepia(70%);
+}
+
+.blur {
+  filter: blur(30px);
+}
+.invert {
+  filter: invert(60%);
+}
+
+.grayscale {
+  filter: grayscale(30%);
+}
+
+.multy {
+  filter: contrast(20%) hue-rotate(70deg) saturate(150%);
 }
