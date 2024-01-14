@@ -247,12 +247,6 @@ div:has(.card_image) span {
   transition: opacity 0.3s ease;
 }
 
-.theme-menu__button:disabled:before {
-  content: "▶";
-  position: relative;
-  animation: slideAnimation 0.5s ease-in-out infinite alternate;
-}
-
 .theme-menu__button:before {
   content: "▶";
   position: relative;
@@ -268,9 +262,6 @@ div:has(.card_image) span {
   outline: none;
   display: flex;
   gap: 6px;
-}
-
-.theme-menu__item {
 }
 
 .theme-menu__button:after {
