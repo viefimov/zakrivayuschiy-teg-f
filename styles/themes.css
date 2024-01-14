@@ -83,11 +83,11 @@ article,
   border-color: var(--accent-color);
 }
 
-h3.main_font {
+.card_title.main_font {
   font-variation-settings: "wght" var(--weight-title);
 }
 
-p.main_font {
+.card_text.main_font {
   font-variation-settings: "wght" var(--weight-text);
 }
 
