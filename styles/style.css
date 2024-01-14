@@ -100,6 +100,9 @@ button {
 .theme-menu__button {
   text-transform: uppercase;
   padding: 0;
+  outline: none;
+  display: flex;
+  gap: 6px;
 }
 .header_title {
   display: flex;
@@ -256,12 +259,6 @@ div:has(.card_image) span {
 
 .theme-menu__button:disabled:before {
   visibility: visible;
-}
-
-.theme-menu__button {
-  outline: none;
-  display: flex;
-  gap: 6px;
 }
 
 .theme-menu__button:after {
