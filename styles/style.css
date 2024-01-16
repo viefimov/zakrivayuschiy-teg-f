@@ -96,6 +96,7 @@
   text-transform: uppercase;
   margin-bottom: 25px;
 }
+
 .theme-menu__button {
   text-transform: uppercase;
   padding: 0;
@@ -103,6 +104,7 @@
   display: flex;
   gap: 6px;
 }
+
 .header_title {
   display: flex;
   flex-direction: column;
@@ -123,10 +125,12 @@
   padding: 25px 25px 0px 25px;
   border-top: solid 2px;
 }
+
 .card_title {
   padding: 5px 10px;
   border-bottom: solid 2px;
 }
+
 .card_image {
   display: block;
   width: 100%;
