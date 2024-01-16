@@ -2,13 +2,13 @@
 :root {
   --backgrond-color: #000000;
   --accent-color: #00cc14;
-  --button-color:#00cc14;
+  --button-color: #00cc14;
   --first-gradient-color: #000;
   --second-gradient-color: #007f0c;
   --third-gradient-color: #004306;
   --weight-text: 465;
   --weight-title: 785;
   --heart-color: #ff0000;
-  --accent-font: 'PressStart2P', fantasy;
-  --main-font: 'Inter', sans-serif;
+  --accent-font: "PressStart2P";
+  --main-font: "Inter", sans-serif;
 }
